@@ -1,4 +1,4 @@
-<div class="text-layout">
+<!-- <div class="text-layout">
     <p>{{nombre | titlecase}}</p>
     <p>{{valor | number}}</p>
     <p>{{ obj | json}}</p>
@@ -10,22 +10,25 @@
   <button pButton label="Prueba prime"></button>
   <p-button label="Submit" icon="pi pi-check" iconPos="right"></p-button>
   <button class="pi pi-check" iconPos="right" >prueba prime</button>
-       
-  <button pButton 
-          label="Prueba v.137" 
-          class="p-button-help"
-          icon="pi pi-bell" 
-          iconPos="right">
-  </button> <br><br> 
 
-          <!-- CARD -->
+  <button pButton
+          label="Prueba v.137"
+          class="p-button-help"
+          icon="pi pi-bell"
+          iconPos="right">
+  </button> <br><br>
+
 
         <p-card [header]="nombre | titlecase" [style]="{'width': '45rem', 'margin-bottom': '2em'}"
         subheader="Subheader de la card">
             <ng-template pTemplate="header">
-                <!-- <img alt="Card" src="assets/showcase/images/usercard.png"> -->
+
             </ng-template>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
                 quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
         </p-card>
-</div>
+</div> -->
+
+<app-menu></app-menu>
+
+<router-outlet></router-outlet>

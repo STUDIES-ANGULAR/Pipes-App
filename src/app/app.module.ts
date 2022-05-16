@@ -4,16 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 // Módulo personalizado
-import { PrimeNgModule } from './prime-ng/prime-ng.module';
+import { SharedModule } from './shared/shared.module';
+import { AppRouterModule } from './app-router.module';
 
 
 @NgModule({
   declarations: [
     AppComponent
   ],
-  imports: [
+  imports: [ //Organizamos por prioridad, primero los de angular
     BrowserModule,
-    PrimeNgModule
+    AppRouterModule,
+    SharedModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
