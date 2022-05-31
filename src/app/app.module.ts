@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LOCALE_ID, NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ registerLocaleData(localeFrances); //registramos el frances en nuestra App
   imports: [ //Organizamos por prioridad, primero los de angular
     AppRouterModule,
     BrowserModule,
+    BrowserAnimationsModule,
     SharedModule,
     VentasModule
 
