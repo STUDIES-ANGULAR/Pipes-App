@@ -48,6 +48,15 @@
                 <li> fecha | date: 'long' </li>
                 <li> fecha | date: 'hh:mm a,  dd/MMMM/YYYY' </li>
             </ul>
+
+            <hr>
+            <ul>
+                <li> fecha | date: 'long':'GMT-4'</li>
+                <li> fecha | date: 'long':'GMT-6'</li>
+                <li> fecha | date: 'long':'':'en'</li>   
+                <li> fecha | date: 'long':'':'fr'</li>
+                <li> fecha | date: 'long':'':'es-CO'</li>
+            </ul>
         </p-card>
     </div>
 
@@ -60,6 +69,16 @@
                 <li> {{fecha | date: 'long'}}</li>
                 <li> {{fecha | date: 'hh:mm a, dd/MMMM/YYYY'}}</li>
             </ul>
+            
+            <hr>
+            <ul>
+                <li> {{fecha | date: 'long':'GMT-4'}}</li>
+                <li> {{fecha | date: 'long':'GMT-6'}}</li>
+                <li> {{fecha | date: 'long':'':'en'}}</li>   <!-- GMT-5 es igual a dejar '' -->
+                <li> {{fecha | date: 'long':'':'fr'}}</li>
+                <li> {{fecha | date: 'long':'':'es-CO'}}</li>
+            </ul>
+            
         </p-card>
     </div>
 
