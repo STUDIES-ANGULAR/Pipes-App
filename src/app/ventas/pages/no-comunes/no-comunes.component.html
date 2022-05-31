@@ -9,14 +9,35 @@
     <div class="p-col p-md-6 p-sm-9">
         <!-- el [toggleable]="true" va en [] para que lo tome como booleando true, sino lo toma como string -->
         <p-fieldset legend="i18nSelect Pipe" [toggleable]="true"> 
-           Saludos {{nombre}}, es un placer 
-           {{genero | i18nSelect:invitacionMapping}} 
-           al evento.
+            <p>
+                Saludos {{nombre}}, es un placer 
+                {{genero | i18nSelect:invitacionMapping}} 
+                al evento.
+            </p>
+            <button (click)="cambiarNombre()"
+                    pButton
+                    label="Cambiar nombre" 
+                    class="p-button-warning"  
+                    icon="pi pi-bell"
+                    iconPos="right"  >
+            </button>
         </p-fieldset>
     </div>
      <div class="p-col p-md-6 p-sm-9">
         <p-fieldset legend="i18nPlural Pipe" [toggleable]="true"> 
-            Content
+            <p>
+                 Actualmente {{clientes.length | i18nPlural:clientesMapa}} 
+            </p>
+            <!-- cuando  usamos el p-button en lugar del button, no usamos (click)="" sino el (onClick)="" -->
+            <button (click)="borrarCliente()"
+                    pButton 
+                    label="Eliminar cliente" 
+                    class="p-button-danger"
+                    icon="pi pi-trash" 
+                    iconPos="right" >
+            </button >
+           
+             
         </p-fieldset>
     </div>
 </div>
