@@ -45,4 +45,21 @@ export class NoComunesComponent {
     direccion: 'Buenaventura, Colombia'
   }
 
+
+  //JsonPipe
+  heroes = [
+    {
+      nombre : 'Superman',
+      vuela: true
+    },
+    {
+      nombre : 'Robin',
+      vuela: false
+    },    
+    {
+      nombre : 'Aquamana',
+      vuela: false
+    }    
+  ]
+
 }
