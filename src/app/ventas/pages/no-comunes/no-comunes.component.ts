@@ -38,4 +38,11 @@ export class NoComunesComponent {
     this.clientes.pop();
   }
 
+  //KeyValue Pipe
+  persona = {
+    nombre: 'Arley',
+    edad: 26,
+    direccion: 'Buenaventura, Colombia'
+  }
+
 }
