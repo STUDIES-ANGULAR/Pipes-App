@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { interval } from 'rxjs';
 
 
 @Component({
@@ -22,7 +23,7 @@ export class NoComunesComponent {
   //i18nPlural
   clientes: any = ['Arley', 'Kelly', 'Juan', 'Carlos', 'Carmensa'];
   clientesMapa = {
-    '=0': 'no tenemos ningún cliente esperando.',
+    '=0': 'no tenemos cliente esperando.',
     '=1': 'tenemos un cliente esperando.',
     // el # representa el valor que estamos recibiendo, seria igual a tener  'other': `tenemos ${this.clientes.length} clientes esperando.`
     'other': 'tenemos # clientes esperando.'
@@ -61,5 +62,15 @@ export class NoComunesComponent {
       vuela: false
     }    
   ]
+
+
+  //Async Pipe
+  miObservable = interval(4000);  //emitira los valores 0,1,2,3,4,5,6,7.. 
+  
+  valorPromesa = new Promise( (resolve, reject) =>{
+    setTimeout(()=>{
+      resolve('Tenemos data de la promesa');
+    }, 3500);
+  });
 
 }

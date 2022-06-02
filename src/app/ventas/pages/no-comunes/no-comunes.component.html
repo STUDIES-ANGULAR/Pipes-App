@@ -80,6 +80,18 @@
       </p-fieldset>
     </div>
 
+
+    <div class="p-col p-md-6 p-sm-9">
+        <p-fieldset legend="Async Pipe" [toggleable]="true">
+            <!-- el pipe async se suscribe a las emisiones del observable e imprime cada emisión -->
+            <pre *ngIf="!(miObservable | async)">Resolviendo observable</pre>  
+            <pre>{{ miObservable | async }}</pre> 
+            <!-- muestra resolviendo promesa mientras se resuelve a través del async -->
+            <pre *ngIf="!(valorPromesa | async)">Resolviendo promesa</pre>  
+            <pre>{{ valorPromesa | async }}</pre> 
+  
+        </p-fieldset>
+      </div>
    
 
 </div>
