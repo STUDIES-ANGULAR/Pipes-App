@@ -58,3 +58,26 @@
     </p-table>
   </div>
 </div>
+
+<div class="p-grid">
+    <div class="p-col p-mt-3">
+        <!-- el slice:0 es para que le mande una copia, y asi no mutar el original para que no ordene la tabla de arriba -->
+      <p-table [value]="heroes | slice:0">
+          <ng-template pTemplate="header">
+              <tr>
+                <th pSortableColumn="nombre">Nombre <p-sortIcon field="nombre"></p-sortIcon></th>
+                <th pSortableColumn="vuela">Vuela <p-sortIcon field="vuela"></p-sortIcon></th>
+                <th pSortableColumn="color">Color<p-sortIcon field="color"></p-sortIcon></th>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-heroe>
+              <tr>
+                  <td>{{heroe.nombre}}</td>
+                  <!-- Hacemos uso de 2 piple uno propio para pasar de booleano a string y luego ese string a titlecase -->
+                  <td>{{heroe.vuela | vuela | titlecase }}</td> 
+                  <td>{{heroe.color}}</td>
+              </tr>
+          </ng-template>
+      </p-table>
+    </div>
+  </div>
